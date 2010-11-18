@@ -1,0 +1,7 @@
+<%=error_messages_for :book%>
+<%=form_for @book do |f|%>
+  <p>Title: <%=f.text_field :title%></p>  
+  <p>Author: <%=f.select :author_id, Author.all.collect{|a| [a.name,a.id]}%></p>
+  <p><%=f.submit :Save%></p>  
+<%end%>
+

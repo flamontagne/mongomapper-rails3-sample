@@ -1,0 +1,9 @@
+<h2>All authors</h2>
+
+<ul>
+<%@authors.each do |author|%>
+  <li><%=author.name%> (<%=pluralize(author.books.count,"book")%>) | <%=link_to "Edit", edit_author_url(author)%></li>
+<%end%>
+</ul>
+
+<%=link_to "Add a new author", new_author_url%>

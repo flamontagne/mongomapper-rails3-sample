@@ -1,0 +1,9 @@
+<h2>All books</h2>
+
+<ul>
+<%@books.each do |book|%>
+  <li><%=book.title%> (<%=book.author.name%>) | <%=link_to "Edit", edit_book_url(book)%> | <%=link_to "Delete", book_url(book), :method => :delete%></li>
+<%end%>
+</ul>
+
+<%=link_to "Add a new book", new_book_url%>

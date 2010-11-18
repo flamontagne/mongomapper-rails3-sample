@@ -1,0 +1,6 @@
+<%=error_messages_for :author%>
+<%=form_for @author do |f|%>
+  <p>Name: <%=f.text_field :name%></p>  
+  <p><%=f.submit :Save%></p>  
+<%end%>
+
