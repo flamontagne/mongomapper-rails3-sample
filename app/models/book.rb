@@ -4,6 +4,7 @@ class Book
   #keys
   key :title
   key :author_id, ObjectId
+  
 # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
  validates_presence_of :title
  validates_uniqueness_of :title
