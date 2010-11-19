@@ -17,10 +17,16 @@ http://www.mongodb.org/downloads
 
 === Gems (mongo, MongoMapper and bson_ext)
 
-  bundle install #should get you going
+The Gemfile has a "require 'mongo'" clause just before the gem command to ensure that a dependency (bson_ext) is correctly
+loaded. FOr this reason you have to install mongo before running bundle install.
 
-Other
-=====
+  sudo gem install mongo
+
+and then
+
+  bundle install
+
+== Other
 
 Since we're not using ActiveRecord, we have to specify the --orm option when generating a model.
 For example: rails generate model Book --orm mongo_mapper
